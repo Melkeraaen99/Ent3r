@@ -6,8 +6,8 @@ import random
 
 #x_in_a_row = int(input('Hvor mange på rad?: '))
 x_in_a_row = 4  # Begrenser det til 4 på rad for øyeblikket
-Row_count = int(input('Hvor mange rader vil du ha? (vertikalt): '))
-Coloumn_count = int(input('Hvor mange kolonner vil du ha? (horisontalt): '))
+Row_count = int(input('Hvor mange rader vil du ha? (vertikalt): '))  # Standard brett er 6 her, skrives inn i terminalen når koden kjører
+Coloumn_count = int(input('Hvor mange kolonner vil du ha? (horisontalt): ')) # Standard brett er 7 her, skrives inn i terminalen når koden kjører
 player_name = input('Spillernavn : ')
 player_1 = 0
 AI = 1
@@ -21,7 +21,7 @@ White = (255,255,255)
 Empty = 0
 Player_piece = 1
 AI_piece = 2
-turn = int(input('Hvem begynner? (1 eller 2): '))-1
+turn = int(input('Hvem begynner? (1 eller 2): '))-1 # Skriv 1 for å begynne selv i terminalen når denne kjøres, 2 for at computeren skal begynne
 
 def create_board():
     board = np.zeros((Row_count, Coloumn_count))
